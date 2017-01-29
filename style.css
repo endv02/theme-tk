@@ -1,0 +1,16 @@
+/*
+Theme Name: theme-tk
+Theme URI: https://github.com/endv02/theme-tk
+GitHub Theme URI: https://github.com/endv02/theme-tk
+Author: RRZE-Webteam
+Author URI: http://www.rrze.fau.de
+Description: Theme für Thomaskirche, Basis FAU-Einrichtungen
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: tk
+Text Domain: tk
+*/
+
+@import url(css/base.css);
+@import url(css/print.css); 
