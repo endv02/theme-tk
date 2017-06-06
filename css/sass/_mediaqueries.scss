@@ -14,8 +14,9 @@ Media Queries for Theme FAU-Einrichtungen
 	#meta {
 	    position: fixed;
 	    top: 0;
-	    height: 42px;
-	    left: 0;
+	    //height: 42px;
+	    height: 32px;
+            left: 0;
 	    right: 0;
 	    z-index: 200;
 	}
@@ -24,7 +25,8 @@ Media Queries for Theme FAU-Einrichtungen
 	}
 	#header {
 	    position: fixed;
-	    top: 42px;
+	    //top: 42px;
+            top: 32px;
 	    left: 0;
 	    right: 0;
 	    background: #fff;
@@ -34,10 +36,12 @@ Media Queries for Theme FAU-Einrichtungen
 		 @include box-shadow(0 1px 3px rgba(0,0,0,0.3));	
 	}
 	.admin-bar #header {
-		top: 74px;
+            top: 64px;
+            //top: 74px;
 	}
 	#hero {
-	    margin-top: 159px;
+            margin-top: 219px;
+	    //margin-top: 159px;
 	    transition: none;
 	}
 	#hero-slides {

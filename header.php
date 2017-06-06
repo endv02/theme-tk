@@ -33,12 +33,6 @@ global $options;
 		</nav>    
 		<section id="meta">
 			<div class="container">
-				<div class="pull-left">
-					<h3 class="screen-reader-text"><?php _e('Links zu weiteren Portalen','fau'); ?></h3>
-					<?php 
-					echo fau_get_toplinks(); 
-					?>
-				</div>
 				<div class="pull-right">
 					<?php if ( is_active_sidebar( 'language-switcher' ) ) : ?>
 						<?php dynamic_sidebar( 'language-switcher' ); ?>
@@ -46,6 +40,27 @@ global $options;
 				    <h3 class="screen-reader-text"><?php _e('Seiteninterne Suche','fau'); ?></h3>
 				    <?php get_template_part('header', 'searchform'); ?>
 				</div>
+                                <!-- vorher pull-left -->
+				<div class="pull-right">
+					<h3 class="screen-reader-text"><?php _e('Links zu weiteren Portalen','fau'); ?></h3>
+					<?php 
+					// echo fau_get_toplinks(); 
+					?>
+				</div>
+                                 <div class="header-menu">			    
+                                     <a href="#" id="nav-toggle"><span>Menü</span>
+					<div></div>
+					<div></div>
+					<div></div>
+				</a>			
+				<?php
+				    if(has_nav_menu( 'main-menu' ) && class_exists('Walker_Main_Menu', false)) {
+					wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false, 'items_wrap' => '<ul role="navigation" aria-label="'.__("Navigation", "fau").'" id="nav" class="hide-desktop">%3$s</ul>', 'depth' => 2, 'walker' => new Walker_Main_Menu) ); 
+				    } elseif(!has_nav_menu( 'main-menu' )) {
+					echo fau_main_menu_fallback(); 
+				    }
+				?>
+			    </div>
 			</div>
 		</section>
 		<?php if (isset($options['display_nojs_notice']) && $options['display_nojs_notice']==1) { ?> 
@@ -96,19 +111,6 @@ global $options;
 			    echo '</h1>';
 			    ?>
 			    </div>
-			    <div class="header-menu">			    
-				<a href="#" id="nav-toggle" class="hide-desktop">
-					<div></div>
-					<div></div>
-					<div></div>
-				</a>			
-				<?php
-				    if(has_nav_menu( 'main-menu' ) && class_exists('Walker_Main_Menu', false)) {
-					wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false, 'items_wrap' => '<ul role="navigation" aria-label="'.__("Navigation", "fau").'" id="nav">%3$s</ul>', 'depth' => 2, 'walker' => new Walker_Main_Menu) ); 
-				    } elseif(!has_nav_menu( 'main-menu' )) {
-					echo fau_main_menu_fallback(); 
-				    }
-				?>
-			    </div>
+			   
 			</div>
 		</header>

@@ -8,8 +8,14 @@
 */
 global $options;
 ?>
-
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="search"></span>
+  </button>
+        <div class="dropdown-menu">
+            
 <form id="search-header" role="search" method="get" class="searchform" action="<?php echo fau_esc_url(home_url( '/' ))?>">
+
 	<label for="s"><?php _e('Suchen nach...','fau'); ?></label>
 	<input type="text" value="<?php the_search_query(); ?>" name="s" placeholder="<?php _e('Suchen nach...','fau'); ?>">
 	<?php 
@@ -20,5 +26,8 @@ global $options;
 	    }
 	}
 	?>
+
 	<input type="submit" id="searchsubmit" value="<?php _e('Finden','fau'); ?>">
 </form>
+                </div>
+</div>

@@ -1558,7 +1558,8 @@ ul.files {
 	@extend .fa-2x;
 	@extend .fa-chevron-up;
 
-	background: $colorPrimary;
+	background: $colorPrimaryHero;
+        //background: $colorPrimary;
 	color: #fff;
 	padding: 7px;
 	@include border-radius(4px);

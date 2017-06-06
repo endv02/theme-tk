@@ -22,8 +22,8 @@ Responsive Menue for FAU Theme
 
 @media (min-width: $breakMD +1) {
     #nav {
-	overflow: hidden;
-	max-height: 37px;
+	//overflow: hidden;
+	//max-height: 37px;
     }
 }
 @media (max-width: $breakMD) {

@@ -7,14 +7,15 @@ body {
 	font-size: 13px;
 	line-height: 18px;
 	color: $colorText;
-	// background-color: $colorPrimaryHero;
+	//background-color: $colorPrimaryHero;
 }
 
 /* Wrap content in white */
 #wrap {
 	min-height: 100%;
 	margin: 0 auto;	
-	background: #fff;
+	//background: #fff;
+        background: $colorPrimaryHero;
 }
 
 html, body, textarea, input, button, select {
@@ -50,10 +51,15 @@ a {
 p {
 	margin: 0;
 	padding: 0 0 11px 0;
-	font-size: 15px;
-	line-height: 22px;
+	//font-size: 15px;
+	font-size: $fontTextSize;
+        letter-spacing: 0.1em;
+        line-height: 22px;
 	color: $colorText;
-	font-family: $fontStack;
+        font-family: $fontStackLight;
+	//font-family: $fontStack;
+        //neu zugefügt
+        background-color: $colorPrimary;
 	
 	#content & {
 		@include hyphens(auto);
@@ -408,9 +414,11 @@ li {
 
 ul {
 	li {
-	    list-style-type: circle;	    
+	    //list-style-type: circle;	    
+            list-style-type: disc;
 	    ul li {
-		list-style-type: disc;		
+		//list-style-type: disc;	
+                list-style-type: circle;
 		ul li {
 		   list-style-type: square;
 		}

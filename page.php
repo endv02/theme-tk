@@ -15,7 +15,7 @@ get_header(); ?>
 	<div id="content">
 		<div class="container">
 		    	 <?php 
-			    echo fau_get_ad('werbebanner_seitlich',false);
+			    //echo fau_get_ad('werbebanner_seitlich',false);
 			?>
 			<div class="row">
 				

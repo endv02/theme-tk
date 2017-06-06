@@ -11,12 +11,18 @@ $breakMD:   767px;
 $breakLG:   979px;
 
 // Define fonts
-$fontStack: 'roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$fontStack: 'roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontStack: 'opensans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontStackLight: 'opensans-light', "Arial Narrow", sans-serif;
 $fontStackSerifs: Georgia, serif;
 
+$fontTextSize: 16px;
+
 // Define text colors
-$colorText:		#444;
+$colorText:		#fff;
 $colorTextLight:	#797676;
+//$colorText:		#444;
+//$colorTextLight:	#797676;
 
 // Define notice colors
 $colorNotice: 		#a71c18;
@@ -28,7 +34,8 @@ $colorRwFak:	    #8d1429;
 $colorMedFak:	    #0381A2;
 $colorNatFak:	    #048767;
 $colorTechFak:	    #6E7881;
-$colorZUV:	    #003366;
+//$colorZUV:	    #003366;
+$colorZUV:	    #8F87C1;
 $colorDefault:	    #003366;
 
 $colorStandardHellgrau:	    #e9edf2;  
@@ -89,47 +96,57 @@ $colorPrimaryHero:	    $colorPrimary;
     $PalettonDunkelste:	#3b4956;
     $siegelurl: '../img/siegel-techfak.png';   
  } @else if $farbfamilie == 'zuv' {
-    $colorPrimary: $colorZUV;
+    $colorPrimary:      $colorZUV;
     $PalettonHellste:	#dde5f0;
-    $PalettonHeller:	#8fb1ef;
-    $PalettonDunkler:	#24598f;
-    $PalettonDunkelste:	#1f4c7a;
-    $siegelurl: '../img/siegel-zuv.png';     
+    $PalettonHeller:    #CDCAE6;
+    //$PalettonHeller:	#8fb1ef;
+    //$PalettonDunkler:	#24598f;
+    $PalettonDunkler:   #6152A3;
+    $PalettonDunkelste:	desaturate(lighten($colorPrimary, 10%), 90%);
+    $siegelurl: '../img/tk_logo.png';     
  }
     
 
-$colorHover:		    $PalettonDunkelste;
+$colorHover:		    $PalettonHeller;
+//$colorHover:		    $PalettonDunkelste;
 $colorLight:		    $PalettonHeller;
 $colorLightContrast:	    #fff;
-$colorLightest:		    $PalettonHellste;
+$colorLightest:		    #fff;
 $colorLightestContrast:	    $PalettonDunkelste;
-$colorPrimaryHero:	    $colorPrimary;
-$colorPrimaryHeroLight:	    lighten($colorPrimary, 15%); 
+//$colorPrimaryHero:	    #6152A3;
+//$colorPrimaryHero:	    $colorPrimary;
+$colorPrimaryHeroLight:     $colorPrimaryHero;
+//$colorPrimaryHeroLight:	    lighten($colorPrimary, 15%); 
 
 
 $colorSubNavCurrent:		#fff;
 $colorSubNavCurrentBackground:  $PalettonDunkler;
 $colorSubNavCurrentHover:	#fff;
 $colorSubNavCurrentHoverBackground: $colorHover;
-$colorSubNav:			$PalettonDunkelste;
-$colorSubNavBackground:		$colorLightest;
+$colorSubNav:                   $PalettonDunkler;
+//$colorSubNav:			$PalettonDunkelste;
+$colorSubNavBackground:		$PalettonHeller;
+//$colorSubNavBackground:       $colorLightest;
 $colorSubNavBackgroundHover:	$PalettonDunkler; // darken($colorSubNavBackground, 5%);
-$colorMainMenu:			#fff;
+//$colorMainMenu:		#fff;
+$colorMainMenu:			$PalettonDunkler;
+$colorMainCurrent:              #fff;
 
 
 $colorButton:			$PalettonDunkelste;
 $colorButtonBackground:		$colorLightest;
 $colorButtonBackgroundHover:	darken($colorButtonBackground, 5%);
 
-$colorSearchPlaceholder:        #111;
+$colorSearchPlaceholder:        $PalettonDunkler;
 $colorSearchInput:		#000;
-$colorSearchInputBackground:	$colorLightest;
+$colorSearchInputBackground:	$PalettonDunkler;
 $colorSearchInputBackgroundFocus:  #fff;
 
 // Meta Menu
-$colorMeta:			$colorDefault;
+$colorMeta:			#8b81bd;
 // Define Background-Color for Meta Menu at top
-$colorMetaBackground:		$colorStandardHellgrau;
+//$colorMetaBackground:		$colorStandardHellgrau;
+$colorMetaBackground:		#fff;
 $colorMetaFAUHomeBackground:	desaturate(darken($colorStandardHellgrau, 10%), 90%); // #d0d3d8;
 $colorMetaHover:		desaturate(lighten($colorDefault, 10%), 40%);
 $colorMetaLight:		desaturate(lighten($colorDefault, 69%), 75%);

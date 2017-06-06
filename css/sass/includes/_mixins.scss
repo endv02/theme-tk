@@ -87,6 +87,45 @@ Mixins File for Wordpress Theme FAU
 		display: none;
 	}
 }
+// neu für Hauptnav
+@mixin triangle-list($fontSize) {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: none;
+	
+	&:before {
+            @extend .fa;
+            @extend .fa-angle-right;	
+            font-weight: bold;
+            display: table-cell;
+            color: #fff;
+            width: 20px;
+            font-size: $fontSize;
+	}
+}
+
+
+// neu für Meta-Nav unten
+@mixin button-list() {
+	//list-style-type: circle;
+	margin: 0;
+	padding: 0;
+	background: none;
+        list-style: none;
+	
+	//&:before {
+	//	display: none;
+	//}
+ 
+            &:after {
+            content: ' ';
+            display: inline-block;
+            width: 100%;
+            
+        }
+        
+}
 
 @mixin inline-block() {
 	display: inline-block; 
