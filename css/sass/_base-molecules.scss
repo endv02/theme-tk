@@ -1156,10 +1156,10 @@ ul.tagcloud {
     			overflow: hidden; 
 
 			.accordion-toggle {
-				border-left: 10px solid $colorPrimary;
+				//border-left: 10px solid $colorPrimary;
 				background: $colorContentBorders;
 				color: $colorDefault; // $colorPrimary;
-				@include border-radius(4px);
+				//@include border-radius(4px);
 				text-decoration: none;
 				font-size: 16px;
 				padding: 8px 35px 8px 10px;
@@ -1558,7 +1558,8 @@ ul.files {
 	@extend .fa-2x;
 	@extend .fa-chevron-up;
 
-	background: $colorPrimary;
+	background: $colorPrimaryHero;
+        //background: $colorPrimary;
 	color: #fff;
 	padding: 7px;
 	@include border-radius(4px);

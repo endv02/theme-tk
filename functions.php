@@ -5,7 +5,7 @@
  * @since FAU 1.1
  */
 
-load_theme_textdomain( 'tk', get_template_directory() . '/languages' );
+load_theme_textdomain( 'fau', get_template_directory() . '/languages' );
 require_once( get_template_directory() . '/functions/defaults.php' );
 require_once( get_template_directory() . '/functions/constants.php' );
 $options = fau_initoptions();

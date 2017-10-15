@@ -168,7 +168,8 @@ body {
 	font-size: 13px;
 	line-height: 18px;
 	color: #333333;
-	background-color: #ffffff;
+	//background-color: $colorPrimary;
+        background-color: #ffffff;
 }
 
 a {
@@ -231,7 +232,7 @@ a:focus {
 }
 
 .span12 {
-	width: 940px;
+        width: 940px;
 }
 
 .span11 {

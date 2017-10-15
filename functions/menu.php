@@ -50,15 +50,16 @@ class Walker_Main_Menu extends Walker_Nav_Menu {
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
 		$level = $depth + 2;		
-		$output .= $indent.'<div class="nav-flyout"><div class="container"><div class="row"><div class="span4"><ul class="sub-menu level'.$level.'">';
-	}
+		$output .= $indent.'<div class="nav-flyout"><ul class="sub-menu level'.$level.'">';
+		//$output .= $indent.'<div class="nav-flyout"><div class="container"><div class="row"><div class="span4"><ul class="sub-menu level'.$level.'">';
+        }
 	
 	function end_lvl( &$output, $depth = 0, $args = array() ) {
 		global $options;
 		
 		$indent = str_repeat("\t", $depth);
 		$output .= $indent.'</ul>';
-		$output .= '<a href="'.get_permalink($this->currentID).'" class="button-portal">';
+		/*$output .= '<a href="'.get_permalink($this->currentID).'" class="button-portal">';
 		if (isset($options['menu_pretitle_portal']) && $options['menu_pretitle_portal']) {
 		    $output .=  $options['menu_pretitle_portal'].' ';
 		}
@@ -66,8 +67,10 @@ class Walker_Main_Menu extends Walker_Nav_Menu {
 		if (isset($options['menu_aftertitle_portal']) && $options['menu_aftertitle_portal']) {
 		    $output .=  ' '.$options['menu_aftertitle_portal'];
 		}
-		$output .= '</a>';
-		$output .= '</div>';
+		$output .= '</a>';*/
+		
+                // wegen span4 weg auskommentiert
+                //$output .= '</div>';
 			
 		$nothumbnail  = get_post_meta( $this->currentID, 'menuquote_nothumbnail', true );	
 
@@ -118,7 +121,8 @@ class Walker_Main_Menu extends Walker_Nav_Menu {
 		    $output .= '</div>';	
 	
 		}
-		$output .= '</div></div></div>';
+		//$output .= '</div></div></div>';
+                $output .= '</div>';
 	}
 	
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {

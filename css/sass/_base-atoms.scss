@@ -7,14 +7,15 @@ body {
 	font-size: 13px;
 	line-height: 18px;
 	color: $colorText;
-	// background-color: $colorPrimaryHero;
+	//background-color: $colorPrimaryHero;
 }
 
 /* Wrap content in white */
 #wrap {
 	min-height: 100%;
 	margin: 0 auto;	
-	background: #fff;
+	//background: #fff;
+        background: $colorPrimaryHero;
 }
 
 html, body, textarea, input, button, select {
@@ -22,14 +23,15 @@ html, body, textarea, input, button, select {
 }
 
 a {
-	color: $colorPrimary;
+	color: $colorText;
 	
 	&:hover, &:focus {
 		color: $colorHover;
 	}
 	
 	p &, li &, table &, .accordion-inner & {
-		text-decoration: underline;
+		//text-decoration: underline;
+                font-weight: bold;
 	}
 	
 	table &:hover, table &:focus {
@@ -50,10 +52,15 @@ a {
 p {
 	margin: 0;
 	padding: 0 0 11px 0;
-	font-size: 15px;
-	line-height: 22px;
+	//font-size: 15px;
+	font-size: $fontTextSize;
+        letter-spacing: 0.1em;
+        line-height: 22px;
 	color: $colorText;
-	font-family: $fontStack;
+        font-family: $fontStackLight;
+	//font-family: $fontStack;
+        //neu zugefügt
+        background-color: $colorPrimary;
 	
 	#content & {
 		@include hyphens(auto);
@@ -278,18 +285,17 @@ h3,
 h4,
 h5,
 h6 {
-	color: $colorPrimary;
+	color: $colorText;
 }
 .sidebar-inline+h1 {
 	    margin-top: 0;
 }
-
+            
 h2 {
-	font-size: 24px;
 	line-height: 28px;
 	margin: 0;
-	padding: 22px 0;
-	font-weight: bold;
+        padding: 11px 0 22px 45px;
+	font: italic 24px $fontStack;
 	
 	
 	.sidebar-outline &, 
@@ -335,10 +341,11 @@ h2 {
 
 h3 {
 	margin: 0;
-	padding: 11px 0;
-	font-size: 18px;
+	padding: 11px 0 11px 45px;
+	//font-size: 18px;
 	line-height: 22px;
-	font-weight: bold;
+	//font-weight: bold;
+        font: italic 18px $fontStack;
 	
 	&.abstract {
 		padding: 0 0 22px 0;
@@ -408,9 +415,11 @@ li {
 
 ul {
 	li {
-	    list-style-type: circle;	    
+	    //list-style-type: circle;	    
+            list-style-type: disc;
 	    ul li {
-		list-style-type: disc;		
+		//list-style-type: disc;	
+                list-style-type: circle;
 		ul li {
 		   list-style-type: square;
 		}
@@ -448,20 +457,24 @@ hr {
 	z-index: 10;
 	clear: both;
 	display: block;
-	height: 20px;
-	background: #fff;
-	border: none;
-	outline: none;
-	margin: 0 0 40px 0;
+	height: 1px;
+        //height: 20px;
+	//background: #fff;
+	//background: $colorPrimary;
+        background: $colorMainMenu;
+        border: none;
+	//outline: none;
+        margin: 10px 0 0 0;
+	//margin: 0 0 40px 0;
 	
-	&.big,
+/*	&.big,
 	.page-template-page-start &,
 	.home & {
 	    height: 60px;
 	    margin: 0 0 60px 0;
-	}
+	}*/
 	
-	&::after {
+/*	&::after {
 	    content: "";
 	    position: absolute; 
 	    top: 10px;
@@ -482,7 +495,7 @@ hr {
 	    right: 0;
 	    bottom: 0;
 	    z-index: 11;
-	}
+	}*/
 }
 .page-template-page-start hr::after,
 .home hr::after {
@@ -559,7 +572,7 @@ table {
 	
 	ul {
 		li {
-			color: $colorPrimary;
+			color: $colorText;
 			font-size: 13px;
 			line-height: 18px;
 			background-position: left 5px;
