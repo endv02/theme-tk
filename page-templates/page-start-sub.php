@@ -14,8 +14,8 @@ global $options;
 ?>
 
 	<section id="hero" class="hero-small">
-		<div class="container">
-		    <div class="row">
+        <div class="container">
+		<div class="row">
 			<div class="span12">
 			    <?php 
 //			    $copyright = '';
@@ -44,7 +44,7 @@ global $options;
 //				echo '<p class="credits">'.$copyright."</p>";
 //			    } 
 			    ?>
-
+				    
 						<?php 
 //					       $header_image = get_header_image();
 //						if (!empty( $header_image ) ){	
@@ -63,7 +63,7 @@ global $options;
 				    <a href="#content" class="hero-jumplink-content"></a>
 				<?php } ?>
 
-				</div>
+			     </div>
 
 	
 				    
@@ -114,7 +114,7 @@ global $options;
 
 			    }
 			    if (($number==0) || ($number < $maxall)) {
-
+     
 				if ($number < $maxall) {
 				    $num = $maxall - $number;
 				    if ($num <=0 ) {
@@ -136,14 +136,14 @@ global $options;
 
 				    $args .= 'post_type=post&has_password=0&posts_per_page='.$options['start_max_newscontent'];	
 				    $query = new WP_Query( $args );
-				}
+                                        }
 				while ($query->have_posts() ) { 
 				    $query->the_post(); 
 				    echo fau_display_news_teaser($post->ID);
 				     wp_reset_postdata();
 				}
 			    }
-
+             
 //			    if ($options['start_link_news_show']) {
 //				echo fau_get_category_links();
 //			    }
