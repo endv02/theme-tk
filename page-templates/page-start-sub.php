@@ -185,8 +185,6 @@ global $options;
 		
 	</div> <!-- /content -->
 
-        </div> <!-- /content -->
-<?php endwhile; ?>
 <?php 
 get_footer(); 
 
