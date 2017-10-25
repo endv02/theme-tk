@@ -465,6 +465,7 @@ hr {
         border: none;
 	//outline: none;
         margin: 10px 0 0 0;
+//        margin: 10px 0 0 45px;
 	//margin: 0 0 40px 0;
 	
 /*	&.big,
@@ -497,6 +498,11 @@ hr {
 	    z-index: 11;
 	}*/
 }
+
+hr ~ p {
+    padding-top: 11px;
+} 
+
 .page-template-page-start hr::after,
 .home hr::after {
     top: 30px;

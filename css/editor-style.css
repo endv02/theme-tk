@@ -4167,6 +4167,9 @@ hr {
   	    z-index: 11;
   	}*/ }
 
+hr ~ p {
+  padding-top: 11px; }
+
 .page-template-page-start hr::after,
 .home hr::after {
   top: 30px;
@@ -4185,8 +4188,8 @@ blockquote {
 table {
   border: 0;
   background: transparent;
-  border-top: 1px solid #dfe6ec;
-  border-bottom: 1px solid #dfe6ec;
+  border-top: 1px solid #6152a3;
+  border-bottom: 1px solid #6152a3;
   margin: 5px 0 20px 0;
   width: 100%; }
   table tbody, table tr, table th, table td {
@@ -4197,10 +4200,10 @@ table {
     line-height: 18px; }
   table th {
     color: #fff;
-    background: #dfe6ec;
+    background: #6152a3;
     font-weight: bold;
-    border-top: 1px solid #dfe6ec;
-    border-bottom: 1px solid #dfe6ec;
+    border-top: 1px solid #6152a3;
+    border-bottom: 1px solid #6152a3;
     text-align: left; }
   table td {
     border-right: 1px solid #fff;

@@ -23,6 +23,7 @@ if (!class_exists('RRZE_Calendar')) {
 		    $inline = 'style="background-color:' . $event->category->color.'"';
 		}
 	    }
+					
 	    ?>
         <li>                                           
             <div class="event-item">
@@ -45,11 +46,13 @@ if (!class_exists('RRZE_Calendar')) {
                         </div>
                     <?php else: ?>
                         <div class="event-time">
-                            <?php echo esc_html(sprintf(__('%1$s Uhr bis %2$s Uhr', 'fau'), $event->short_start_time, $event->short_end_time)) ?>
+                                                            <?php echo esc_html(sprintf(__('%1$s Uhr', 'fau'), $event->short_start_time)) //esc_html(sprintf(__('%1$s Uhr bis %2$s Uhr', 'fau'), $event->short_start_time, $event->short_end_time)) ?>
                         </div>            
                     <?php endif; ?>
                     <div class="event-title">
-                        <a href="<?php echo $event->endpoint_url; ?>"><?php echo esc_html($event->summary); ?></a>
+                                                        <!-- <a href=" --><?php //echo $event->endpoint_url; ?><!-- "> -->
+                                                        <?php echo esc_html($event->summary); ?>
+                                                        <!-- </a> -->
                     </div>                                                    
                     <div class="event-location">
                         <?php echo $event->location ? nl2br($event->location) : '&nbsp;'; ?>
@@ -57,6 +60,7 @@ if (!class_exists('RRZE_Calendar')) {
                 </div>
             </div>
         </li>
+                                        <hr>
         <?php endforeach; ?>
     <?php endforeach; ?>
     </ul>

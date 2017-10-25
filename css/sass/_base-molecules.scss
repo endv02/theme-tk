@@ -761,23 +761,23 @@
 
 .event-date {
 	float: left;
-	display: block;
+	//display: block;
 	background: $colorPrimary;
 	color: #fff;
 	padding: 5px;
-	width: 30px;
+	//width: 30px;
 	text-align: center;
 }
 
 .event-date-month {
-	font-size: 9px;
+	//font-size: 9px;
 	line-height: 10px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
 .event-date-day {
-	font-size: 20px;
+	//font-size: 20px;
 	line-height: 20px;
 	font-weight: bold;
 }
@@ -793,11 +793,11 @@
 }
 
 .event-time {
-	color: $colorPrimary;
+	//color: $colorPrimary;
 }
 
 .event-location {
-	color: $colorTextLight;
+	//color: $colorTextLight;
 }
 
 .event-info {
@@ -1145,6 +1145,10 @@ ul.tagcloud {
 
 
 /* Accordion */
+/*div.accordion {
+    padding-left: 0px;
+}*/
+
 .accordion {
 	margin: 10px 0 20px 0;
 	
@@ -1154,38 +1158,49 @@ ul.tagcloud {
 		
 		.accordion-heading {
     			overflow: hidden; 
+                        font-weight: bold;
 
 			.accordion-toggle {
 				//border-left: 10px solid $colorPrimary;
 				background: $colorContentBorders;
-				color: $colorDefault; // $colorPrimary;
+				color: $colorPrimaryContrast;
 				//@include border-radius(4px);
 				text-decoration: none;
-				font-size: 16px;
+				font-size: 16px;                            
 				padding: 8px 35px 8px 10px;
 				position: relative;
-				
-				&:before {
+
+                                &:before {
+                                        @include triangle-list(16px,$colorMainCurrent);
+                                        padding-right: 10px;
+                                }
+/*				&:before {
 					@extend .fa;
 					@extend .fa-caret-down;
 					position: absolute;
 					top: 10px;
 					right: 10px;
-				}
+				}*/
 
 				&:hover, &:focus {
-					background-color: darken($colorLightest, 3%);
-					text-decoration: none;
+					background-color: $PalettonHeller; // darken($colorLightest, 3%);
+					color: $colorContentBorders;
+                                        text-decoration: none;
 				}
 
 				&.active, &.active:hover, &.active:focus {
-					background-color: darken($colorLightest, 3%);
-					color: $colorLightestContrast; // $colorPrimary;
+					//background-color: darken($colorLightest, 3%);
+                                        background-color: $PalettonHeller;
+					color: $colorContentBorders;    //$colorLightestContrast;  $colorPrimary;
 					
-					&:before {
+                                        &:before {
+                                                @include triangle-list-down(16px,$colorMainCurrent);
+                                                padding-right: 10px;
+                                        }
+/*					&:before {
 						@extend .fa-caret-up;
 						top: 8px;
-					}
+					}*/
 				}
 			}
 		}
@@ -1197,8 +1212,9 @@ ul.tagcloud {
 			.accordion-inner {
 				@extend .clearfix;
 				border: none;
-				background: $colorContentRegions;
-				padding: 15px 20px;
+				//background: $colorContentRegions;
+				//padding: 15px 20px;
+                                padding: 10px 0px;
 			}
 		}
 	}
@@ -1249,7 +1265,7 @@ ul.tagcloud {
 		top: inherit;
 	    }
 	    border: 1px solid $PalettonHellste;
-	    margin: 30px 20px;
+	    //margin: 30px 20px;
 	    height: inherit;
 	}
 	

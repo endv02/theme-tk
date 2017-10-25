@@ -78,18 +78,32 @@ global $options;
 			
 
 			<div class="row">
-				<div class="span8">
-				   
-				    
+				<div class="span12">	    
 		    <?php 
 			wp_reset_postdata();
 			wp_reset_query();
+                        ?>
 			
-			echo "<main>\n";
+			<main>
+                            <?php
+			if(has_post_thumbnail()) {
+                                            
+                            ?>
+                                    <div class="startimg">
+                                <?php 
+                                            the_post_thumbnail('full');
+                                            ?>
+                                    </div>
+                            <?php
+                        }
+                        ?>
+                        <div class="startdesc">
+			<?php
+                            the_content();
+                        ?>
+			</div>
 			
-			the_content();
-			
-			
+                        <?php    
 			$number = 0;
 			$max = $options['start_max_newspertag'];
 			$maxall = $options['start_max_newscontent'];
@@ -151,32 +165,28 @@ global $options;
 			?>
 			</main>	
 				</div>
-				<div class="span4 sidebar-outline">
-					<?php
-//					get_template_part('sidebar', 'events'); 					
-//					get_template_part('sidebar');
-					?>
-				</div>
+
 			</div> <!-- /row -->
 			<?php  
 			
 		
-			 $menuslug = get_post_meta( $post->ID, 'portalmenu-slug', true );	
-			 if ($menuslug) { ?>	
-			    <hr>
+//			 $menuslug = get_post_meta( $post->ID, 'portalmenu-slug', true );	
+//			 if ($menuslug) { ?>	
+                        
 			    <?php 			
-				$nosub  = get_post_meta( $post->ID, 'fauval_portalmenu_nosub', true );
-				if ($nosub==1) {
-				    $displaysub =0;
-				} else {
-				    $displaysub =1;
-				}
-				$nofallbackthumbs  = get_post_meta( $post->ID, 'fauval_portalmenu_nofallbackthumb', true );
-				$nothumbnails  = get_post_meta( $post->ID, 'fauval_portalmenu_thumbnailson', true ); 
-
-				fau_get_contentmenu($menuslug,$displaysub,0,0,$nothumbnails,$nofallbackthumbs);
-	
-			 }			 						
+//                              // hier kam noch ein <hr>
+//				$nosub  = get_post_meta( $post->ID, 'fauval_portalmenu_nosub', true );
+//				if ($nosub==1) {
+//				    $displaysub =0;
+//				} else {
+//				    $displaysub =1;
+//				}
+//				$nofallbackthumbs  = get_post_meta( $post->ID, 'fauval_portalmenu_nofallbackthumb', true );
+//				$nothumbnails  = get_post_meta( $post->ID, 'fauval_portalmenu_thumbnailson', true ); 
+//
+//				fau_get_contentmenu($menuslug,$displaysub,0,0,$nothumbnails,$nofallbackthumbs);
+//	 
+//			 }			 						
 			 ?>
 			
 			

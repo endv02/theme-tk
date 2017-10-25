@@ -40,6 +40,7 @@ global $options;
 				</div>
 			</div>
 		</div>
+            <?php if( get_post_type() != 'page'  ) : ?>
 		<div class="row">
 			<div class="span12">
 
@@ -47,5 +48,6 @@ global $options;
 				
 			</div>
 		</div>
+            <?php endif; ?>
 	</div>
 </section>
