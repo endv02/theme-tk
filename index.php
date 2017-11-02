@@ -36,11 +36,12 @@ $posttype = get_post_type();
 				</div>
 				<div class="span9">			
 			     <?php } else { 
-				 if (get_post_type() != 'post') { ?>
+				 //if (get_post_type() != 'post') { ?>
 				     <div class="span12">	
-				  <?php  } else { ?>
-				     <div class="span8">	
-				  <?php  } ?>	 
+				  <?php  //} else { 
+                                  //echo '<div class="span8">'; ?>
+				     	
+				  <?php  //} ?>	 
 			     <?php }  ?>
 				    <main>
 					<?php 

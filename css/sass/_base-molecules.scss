@@ -439,23 +439,37 @@
 .post-image {
     float: right;
     margin: 20px 0 10px 20px;
-    text-align: center;
+    //text-align: center;
+    text-align: right;
     
     .post-image-caption {
 	    line-height: 18px;
-	    font-size: 13px;
+	    font-size: 8px;
 	    padding: 10px 0;
 	    width: 300px;
-	    text-align: left;
+	    //text-align: left;
+            float: right;
+            text-align: right;
     }
 }
 
 .news-details {
-	margin-top: 20px;
+	//margin-top: 20px;
 	
 	.post-image {
 	    margin-top: 0px;
 	}
+        
+        .post-image-caption {
+	    line-height: 18px;
+	    font-size: 10px;
+	    padding: 10px 0;
+	    width: 300px;
+	    //text-align: left;
+            float: right;
+            text-align: right;
+        }
+        
 	.subtitle {
 	    padding-top: 0;
 	}
@@ -522,8 +536,9 @@
 	display: block;
 	text-align: center;
 	background: $colorStandardHellgrau;
-	padding: 4px;
-	@include box-shadow(0 1px 2px rgba(0,0,0,0.3));
+	//padding: 4px;
+        padding: 0px;
+	//@include box-shadow(0 1px 2px rgba(0,0,0,0.3));
 	
 	img {
 		@include box-shadow(none);
@@ -531,10 +546,23 @@
 }
 
 .news-item {
-	margin-bottom: 11px;
+	margin-bottom: 20px;
 	
 	h2 {
-	    padding-bottom: 10px;
+            //padding: 30px 0 10px 0;
+            font: italic 28px $fontStackLight;
+            padding: 10px 0 20px 0;
+            letter-spacing: 0.1em;
+
+            &:before {
+                @extend .fa;
+                //@extend .fa-3x;
+                @extend .fa-circle;
+                color: $colorSubNav;
+                font-size: 20px;
+                padding-right: 25px;
+            }
+
 	}
 	.news-meta {
 		padding: 5px 0;

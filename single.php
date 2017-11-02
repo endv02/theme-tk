@@ -19,11 +19,11 @@ get_header(); ?>
 		<div class="container">
 
 			<div class="row">
-				<div class="span8">
+				<div class="span12">
 				    <main>
 					<article class="news-details">
 						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-							<div class="post-image">
+                                                        <hr>
 								<?php 
 								$bildunterschrift = get_post_meta( $post->ID, 'fauval_overwrite_thumbdesc', true );
 								$post_thumbnail_id = get_post_thumbnail_id(); 
@@ -32,7 +32,7 @@ get_header(); ?>
 									echo '<a class="lightbox" href="'.fau_esc_url($full_image_attributes[0]).'">';
 
 								    $image_attributes = wp_get_attachment_image_src( $post_thumbnail_id, 'post' );							    
-								    echo '<img src="'.fau_esc_url($image_attributes[0]).'" class="attachment-post wp-post-image" width="'.$image_attributes[1].'" height="'.$image_attributes[1].'" '
+								    echo '<img src="'.fau_esc_url($image_attributes[0]).'" class="attachment-post post-image" width="'.$image_attributes[1].'" height="'.$image_attributes[1].'" '
 									    . 'title="'.get_the_title().'" alt="">';
 								
 								    echo '</a>';
@@ -73,7 +73,7 @@ get_header(); ?>
 								}
 
 								?>
-							</div>
+							<!-- </div>  irgendwie zu viel -->
 
 						<?php endif; 
 						
@@ -106,7 +106,7 @@ get_header(); ?>
 					if ( $headline) {
 					     echo '<h2 class="subtitle">'.$headline."</h2>\n";
 					}
-						echo $output;    
+						//echo $output;    
 						the_content();
 						
 						if ($options['post_display_category_below']) {
@@ -120,7 +120,7 @@ get_header(); ?>
 						    }
 						    
 						    $output .= '</p>'."\n";
-						    echo $output;   
+						    //echo $output;   
 						}
 						?>
 					    
@@ -131,17 +131,17 @@ get_header(); ?>
 					 <div class="post-comments" id="comments"> 
 					    <?php 
 					    
-					    comments_template(); ?>
+					    //comments_template(); ?>
 					 </div>
 				    <?php }
 				    ?>
 				</div>
 				
-				<?php get_template_part('sidebar', 'news'); ?>
+				<?php //get_template_part('sidebar', 'news'); ?>
 			</div>
 
 		</div>
-	    	<?php get_template_part('footer', 'social'); ?>	
+	    	<?php //get_template_part('footer', 'social'); ?>	
 	</div>
 	
 <?php endwhile; 

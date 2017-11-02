@@ -1230,6 +1230,7 @@ function fau_display_news_teaser($id = 0, $withdate = false) {
     $post = get_post($id);
     $output = '';
     if ($post) {
+        $output .= '<hr>';
 	$output .= '<article class="news-item" itemscope itemtype="http://schema.org/NewsArticle">';
 	$link = get_post_meta( $post->ID, 'external_link', true );
 	$external = false;
@@ -1237,44 +1238,10 @@ function fau_display_news_teaser($id = 0, $withdate = false) {
 	    $external = true;
 	} else {
 	    $link = fau_esc_url(get_permalink($post->ID));
-	}
-	$output .= "\t<h2 itemprop=\"headline\">";  
-	$output .= '<a itemprop="url" ';
-	if ($external) {
-	    $output .= 'class="ext-link" rel="canonical" ';
-	}
-	$output .= 'href="'.$link.'">'.get_the_title($post->ID).'</a>';
-	$output .= "</h2>\n";  
-	
-	
-	$categories = get_the_category();
-	$separator = ', ';
-	$thiscatstr = '';
-	$typestr = '';
-	if($categories){
-	    $typestr .= '<span class="news-meta-categories"> ';
-	    $typestr .= __('Kategorie', 'fau');
-	    $typestr .= ': ';
-	    foreach($categories as $category) {
-		$thiscatstr .= '<a href="'.get_category_link( $category->term_id ).'">'.$category->cat_name.'</a>'.$separator;
-	    }
-	    $typestr .= trim($thiscatstr, $separator);
-	    $typestr .= '</span> ';
-	}
-	    
-	
-	if ($withdate) {
-	    $output .= '<div class="news-meta">'."\n";
-	    $output .= $typestr;
-	    $output .= '<span class="news-meta-date" itemprop="datePublished" content="'. esc_attr( get_post_time('c') ).'"> '.get_the_date('',$post->ID)."</span>\n";
-	    $output .= '</div>'."\n";
-	}
-
-	
-	$output .= "\t".'<div class="row">'."\n";  
-	
-	if ((has_post_thumbnail( $post->ID )) ||($options['default_postthumb_always']))  {
-	    $output .= "\t\t".'<div aria-hidden="true" class="span3" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">'."\n"; 
+	}        
+        
+        if ((has_post_thumbnail( $post->ID )) ||($options['default_postthumb_always']))  {
+	    $output .= "\t\t".'<div aria-hidden="true" class="span3 alignright" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">'."\n"; 
 	    $output .= '<a href="'.$link.'" class="news-image"';
 	    if ($external) {
 		$output .= ' ext-link';
@@ -1307,10 +1274,50 @@ function fau_display_news_teaser($id = 0, $withdate = false) {
 	    $output .= "\t\t\t".'<meta itemprop="width" content="'.$imgwidth.'">';
 	    $output .= "\t\t\t".'<meta itemprop="height" content="'.$imgheight.'">';		    
 	    $output .= "\t\t".'</div>'."\n"; 
-	    $output .= "\t\t".'<div class="span5">'."\n"; 
+	    //$output .= "\t\t".'<div class="span5">'."\n";
+            $output .= "\t\t".'<div class="span8">'."\n";
 	} else {
 	    $output .= "\t\t".'<div class="span8">'."\n"; 
 	}
+
+        
+        
+
+	$output .= "\t<h2 itemprop=\"headline\">";  
+	$output .= '<a itemprop="url" ';
+	if ($external) {
+	    $output .= 'class="ext-link" rel="canonical" ';
+	}
+	$output .= 'href="'.$link.'">'.get_the_title($post->ID).'</a>';
+	$output .= "</h2>\n";  
+	
+	
+//	$categories = get_the_category();
+//	$separator = ', ';
+//	$thiscatstr = '';
+//	$typestr = '';
+//	if($categories){
+//	    $typestr .= '<span class="news-meta-categories"> ';
+//	    $typestr .= __('Kategorie', 'fau');
+//	    $typestr .= ': ';
+//	    foreach($categories as $category) {
+//		$thiscatstr .= '<a href="'.get_category_link( $category->term_id ).'">'.$category->cat_name.'</a>'.$separator;
+//	    }
+//	    $typestr .= trim($thiscatstr, $separator);
+//	    $typestr .= '</span> ';
+//	}
+	    
+	
+//	if ($withdate) {
+//	    $output .= '<div class="news-meta">'."\n";
+//	    $output .= $typestr;
+//	    $output .= '<span class="news-meta-date" itemprop="datePublished" content="'. esc_attr( get_post_time('c') ).'"> '.get_the_date('',$post->ID)."</span>\n";
+//	    $output .= '</div>'."\n";
+//	}
+
+	
+	$output .= "\t".'<div class="row">'."\n";  
+	
 	$output .= "\t\t\t".'<p itemprop="description">'."\n"; 
 	
 	
