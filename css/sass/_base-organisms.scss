@@ -661,12 +661,13 @@ input[type="button"] {
 
 // Backdrop to catch body clicks on mobile, etc.
 .dropdown-backdrop {
-  position: fixed;
+    position: static;
+/*  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  z-index: ($zindex-dropdown - 10);
+  z-index: ($zindex-dropdown - 10);*/
 }
 
 // Right aligned dropdowns
@@ -2110,7 +2111,7 @@ input[type="button"] {
         background: none;
 
 
-        &:before {
+/*        &:before {
             @extend .fa;
             @extend .fa-circle;	
             font-size: 7px;
@@ -2118,6 +2119,6 @@ input[type="button"] {
             color: #fff;
             width: 20px;
             font-weight: normal;
-        }
+        }*/
     }
 }
