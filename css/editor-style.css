@@ -3897,7 +3897,7 @@ p {
   p.notice-hinweis, p.hinweis {
     margin: 0;
     padding: 22px 0;
-    color: #8F87C1;
+    color: #fff;
     font-weight: bold; }
     p.notice-hinweis:before, p.hinweis:before {
       padding-right: 8px;

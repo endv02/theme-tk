@@ -55,7 +55,10 @@ $PalettonHellste:	desaturate(lighten($colorPrimary, 73%), 75%);
 $PalettonHeller:	desaturate(lighten($colorPrimary, 69%), 75%);
 $PalettonDunkler:	desaturate(lighten($colorPrimary, 10%), 90%);
 $PalettonDunkelste:	desaturate(lighten($colorPrimary, 10%), 40%);
-$siegelurl: '../img/siegel-zuv.png';  
+$siegelurl: '../img/tk_logo.png'; 
+$siegelurlmiddle: '../img/tk_logo_middle.png';
+$siegelurlsmall: '../img/tk_logo_small.png';
+//$siegelurl: '../img/siegel-zuv.png';  
  
 $colorPrimaryHero:	    $colorPrimary;
     
@@ -65,7 +68,8 @@ $colorPrimaryHero:	    $colorPrimary;
     $PalettonHeller:	#bfd6f5; // #08C0E7;
     $PalettonDunkler:	#026480;
     $PalettonDunkelste:	#014e63;
-    $siegelurl: '../img/siegel-medfak.png';
+    $siegelurl: '../img/tk_logo.png'; 
+    //$siegelurl: '../img/siegel-medfak.png';
 
  } @else if $farbfamilie == 'phil' {
     $colorPrimary: $colorPhilFak;
@@ -73,21 +77,24 @@ $colorPrimaryHero:	    $colorPrimary;
     $PalettonHeller:	#d9c689;
     $PalettonDunkler:	#805000;
     $PalettonDunkelste:	#553500;
-    $siegelurl: '../img/siegel-philfak.png';   
+    $siegelurl: '../img/tk_logo.png'; 
+    //$siegelurl: '../img/siegel-philfak.png';   
  }  @else if $farbfamilie == 'nat' {
     $colorPrimary: $colorNatFak;
     $PalettonHellste:	#e5efea;
     $PalettonHeller:	#aacfbd;
     $PalettonDunkler:	#006e53;
     $PalettonDunkelste:	#00533f;
-    $siegelurl: '../img/siegel-natfak.png';     
+    $siegelurl: '../img/tk_logo.png'; 
+    //$siegelurl: '../img/siegel-natfak.png';     
  }  @else if $farbfamilie == 'rw' {
     $colorPrimary: $colorRwFak;    
     $PalettonHellste:	#ede7de; // #C9A8AF;
     $PalettonHeller:	#c5ac94; // #bd7d8b;
     $PalettonDunkler:	#690013;
     $PalettonDunkelste:	#42000c;
-    $siegelurl: '../img/siegel-rwfak.png';   
+    $siegelurl: '../img/tk_logo.png'; 
+    //$siegelurl: '../img/siegel-rwfak.png';   
 
  }  @else if $farbfamilie == 'tf' {
     $colorPrimary: $colorTechFak;    
@@ -95,7 +102,8 @@ $colorPrimaryHero:	    $colorPrimary;
     $PalettonHeller:	#d2d5d7; // #8e949a;
     $PalettonDunkler:	#53606b;
     $PalettonDunkelste:	#3b4956;
-    $siegelurl: '../img/siegel-techfak.png';   
+    $siegelurl: '../img/tk_logo.png'; 
+    //$siegelurl: '../img/siegel-techfak.png';   
  } @else if $farbfamilie == 'zuv' {
     $colorPrimary:      $colorZUV;
     $PalettonHellste:	#dde5f0;

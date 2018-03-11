@@ -1,0 +1,70 @@
+/*
+CSS Definitionen für das Plugin Evangelische Termine
+*/
+/* 
+    Created on : 01.02.2018, 02:18:52
+    Author     : kngroh
+*/
+.et_container {
+            //padding: 30px 0 10px 0;
+            font: 20px $fontStackLight;
+            padding: 10px 0 20px 0;
+            letter-spacing: 0.1em;    
+
+// Termine 
+div.et_content_row {
+    display: inline;
+	margin-bottom: 20px;
+        font-size: 50px;
+        
+            &:before {
+                @extend .fa;
+                //@extend .fa-3x;
+                @extend .fa-circle;
+                color: $colorSubNav;
+                font-size: 20px;
+                padding-right: 25px;
+            }
+
+	}
+        .et_content_date {
+            br {
+                display: none;
+                @extend .fa;
+                //@extend .fa-3x;
+                @extend .fa-circle;
+                color: $colorSubNav;
+                font-size: 20px;
+            }
+        }
+}
+/*	.news-meta {
+		padding: 5px 0;
+		margin-top: 0px;
+		margin-bottom: 10px;
+		color: $colorText;
+		display: block;
+		font-family: $fontStack;
+		
+		.news-meta-categories:before {
+		    @extend .fa;
+		    @extend .fa-tag;
+		}
+		.news-meta-date:before {
+		    @extend .fa;
+		    @extend .fa-calendar;
+		}
+	}
+	.news-meta-date {
+	    margin-left: 10px;
+	}
+	h2 .ext-link {
+		@include inline-block;
+		background: url('../img/ext-icon-19.png') no-repeat 100% 50%;
+		padding-right: 15px;
+		
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+	*/

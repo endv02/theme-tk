@@ -1308,8 +1308,10 @@ input[type="button"] {
         h1 {
             //padding: 30px 0 10px 0;
             font: italic 28px $fontStackLight;
-            padding: 0 0 20px 0;
+            //padding: 0 0 20px 0;
+            padding: 0 0 20px 50px;
             letter-spacing: 0.1em;
+            text-indent: -25px;
 
             &:before {
                 @extend .fa;
@@ -1317,7 +1319,8 @@ input[type="button"] {
                 @extend .fa-circle;
                 color: $colorSubNav;
                 font-size: 20px;
-                padding-right: 25px;
+                //padding-right: 25px;
+                padding-right: 20px;
             }
 
         }
@@ -1677,8 +1680,10 @@ input[type="button"] {
     h1 {
         //padding: 30px 0 10px 0;
         font: italic 28px $fontStackLight;
-        padding: 0 0 20px 0;
+        //padding: 0 0 20px 0;
+        padding: 0 0 20px 50px;
         letter-spacing: 0.1em;
+        text-indent: -25px;
 
         &:before {
             @extend .fa;
@@ -1686,7 +1691,8 @@ input[type="button"] {
             @extend .fa-circle;
             color: $colorSubNav;
             font-size: 20px;
-            padding-right: 25px;
+            //padding-right: 25px;
+            padding-right: 20px;
         }
 }
 
@@ -1718,7 +1724,8 @@ input[type="button"] {
 
     img.error-siegel {
         @include box-shadow(none);
-        margin: 0 auto;
+        //margin: 0 auto;
+        margin: 10px auto;
         display: block;
     }
 
@@ -1751,7 +1758,9 @@ input[type="button"] {
         }
         
         ol, ul {
-            padding-left: 36px;
+            //padding-left: 36px;
+            padding-left: 70px;
+            text-indent: -20px;
             li {
                 @include triangle-list($fontTextSize,$colorText);
                 font-size: $fontTextSize;
@@ -1781,6 +1790,15 @@ input[type="button"] {
                 text-align: center;
             }
 
+        }
+        
+        .span8 {
+            margin-left: 0;
+            
+            p {
+                margin-left: 15px;
+            }
+            
         }
 
 

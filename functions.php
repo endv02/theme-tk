@@ -216,11 +216,21 @@ function fau_addmetatags() {
     }
 
     if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) {
-	    $output .=  '<link rel="apple-touch-icon" href="'.get_fau_template_uri().'/img/apple-touch-icon.png">'."\n";
-	    $output .=  '<link rel="shortcut icon" href="'.get_fau_template_uri().'/img/favicon.ico">'."\n";	
+	    $output .=  '<link rel="apple-touch-icon" href="'.get_fau_template_uri().'/img/apple-touch-icon.png" sizes="180x180">'."\n";
+            $output .=  '<link rel="icon" type="image/png" href="'.get_fau_template_uri().'/img/favicon-32x32.png" sizes="32x32">'."\n";            
+            $output .=  '<link rel="icon" type="image/png" href="'.get_fau_template_uri().'/img/favicon-194x194.png" sizes="194x194">'."\n";
+            $output .=  '<link rel="icon" type="image/png" href="'.get_fau_template_uri().'/img/android-chrome-192x192.png" sizes="192x192">'."\n";            
+            $output .=  '<link rel="icon" type="image/png" href="'.get_fau_template_uri().'/img/favicon-16x16.png" sizes="16x16">'."\n";    
+            $output .=  '<link rel="manifest" href="'.get_fau_template_uri().'/img/site.webmanifest">'."\n";            
+            $output .=  '<link rel="mask-icon" href="'.get_fau_template_uri().'/img/safari-pinned-tab.svg" color="#6152a3">'."\n";    
+            $output .=  '<link rel="shortcut icon" href="'.get_fau_template_uri().'/img/favicon.ico">'."\n";
+            $output .=  '<meta name="msapplication-TileColor" content="#603cba">'."\n";
+            $output .=  '<meta name="msapplication-TileImage" content="'.get_fau_template_uri().'/img/mstile-tile-144x144.png">'."\n";
+            $output .=  '<meta name="msapplication-config" content="'.get_fau_template_uri().'/img/browserconfig.xml">'."\n";  
+            $output .=  '<meta name="theme-color" content="#ffffff">'."\n";
     }
-    
-    
+            
+     
     	// Adds RSS feed links to <head> for posts and comments.
 	// add_theme_support( 'automatic-feed-links' );
 	// Will post both: feed and comment feed; To use only main rss feed, i have to add it manually in head

@@ -21,13 +21,13 @@ global $options;
 
 				<h1><?php single_cat_title(); ?></h1>
 				
-				<div class="hero-meta-portal">
+				<!-- <div class="hero-meta-portal"> -->
 					<?php
-					    if(get_post_type() == 'post') {
-						echo $options['title_hero_post_categories'];
-					    }
+//					    if(get_post_type() == 'post') {
+//						echo $options['title_hero_post_categories'];
+//					    }
 					?>
-				</div>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>

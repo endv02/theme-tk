@@ -118,6 +118,7 @@ global $options;
                     echo "</a>";
                 }
                 echo '</h1>';
+                echo '</div>';
                 ?>
             </div>
 

@@ -79,7 +79,8 @@ p {
 	&.hinweis {
 	    margin: 0;
 	    padding: 22px 0;
-	    color: $colorPrimary;
+	    //color: $colorPrimary;
+            color: $colorText;
 	    font-weight: bold;
 	    &:before {
 			@extend .fa;

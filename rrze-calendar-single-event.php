@@ -35,7 +35,7 @@ get_header(); ?>
             <div class="row">
                 <div class="span12">
                     <?php echo $breadcrumb; ?>
-                    <div class="hero-meta-portal"></div>
+                    <!-- <div class="hero-meta-portal"></div> -->
                 </div>
             </div>
             <div class="row">
