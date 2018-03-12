@@ -17,20 +17,6 @@ global $options;
 	<footer id="footer">
 		<div class="container">
 			<div class="row">
-
-                            <!-- <div class="span3"> -->
-                                			<!-- Teil rausgeschmissen -->	
-				<!-- </div>
-				<div class="span4">
-					
-				<p itemscope itemtype="http://schema.org/PostalAddress"> -->
-				<!-- Teil mit PostalAddress rausgeschmissen -->
-                                <!--
-			       </p>
-	
-				</div>
-				<div class="span5"> -->
-                                <!-- anderer Span wegen anderer Aufteilung -->
                                 <div class="span12">
 					<?php 
 					if ( has_nav_menu( 'meta-footer' ) ) {

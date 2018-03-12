@@ -34,21 +34,10 @@ global $options;
                 <div class="container">
                     <div class="pull-right">
                         <div class="header-menu">
-                            <!-- <div class="btn-group">
-                                <button type="button" class="btn btn-search pull-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Suche <span class="fa fa-search"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                </ul>
-                            </div> -->
-
                             <button type="button" class="btn btn-nav pull-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menü <span class="fa fa-bars"></span></button>
-
                             <div class="dropdown-menu">
                                 <?php
                                 if (has_nav_menu('main-menu') && class_exists('Walker_Main_Menu', false)) {
-
                                     wp_nav_menu(array(
                                         'theme_location' => 'main-menu',
                                         'depth' => 2,
@@ -61,17 +50,13 @@ global $options;
                                 ?>
                             </div>
                         </div>
-
                     </div>
                     <?php if (is_active_sidebar('language-switcher')) : ?>
                         <?php dynamic_sidebar('language-switcher'); ?>
                     <?php endif; ?>
                     <h3 class="screen-reader-text"><?php _e('Seiteninterne Suche', 'fau'); ?></h3>
                     <?php //get_template_part('header', 'searchform');   ?>
-
-
                 </div>
-
             </section>
     <?php if (isset($options['display_nojs_notice']) && $options['display_nojs_notice'] == 1) { ?> 
         <noscript>
@@ -95,7 +80,6 @@ global $options;
                 if (!is_front_page()) {
                     echo '<a itemprop="url" rel="home" href="' . fau_esc_url(home_url('/')) . '">';
                 }
-
 
                 if (!empty($header_image)) {
                     $customheader = get_custom_header();
@@ -121,5 +105,4 @@ global $options;
                 echo '</div>';
                 ?>
             </div>
-
         </header>
