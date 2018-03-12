@@ -19,7 +19,11 @@ global $options;
 				fau_breadcrumb(); ?>
 				 
 
-				<h1><?php single_cat_title(); ?></h1>
+				<h1><?php if(is_home()) {
+                                    echo get_the_title(get_option('page_for_posts')) ;
+                                } else {
+                                    single_cat_title();
+                                } ?></h1>
 				
 				<!-- <div class="hero-meta-portal"> -->
 					<?php

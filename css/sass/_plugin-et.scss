@@ -1,70 +1,81 @@
-/*
-CSS Definitionen für das Plugin Evangelische Termine
-*/
-/* 
-    Created on : 01.02.2018, 02:18:52
-    Author     : kngroh
-*/
-.et_container {
-            //padding: 30px 0 10px 0;
-            font: 20px $fontStackLight;
-            padding: 10px 0 20px 0;
-            letter-spacing: 0.1em;    
+//
+// CSS Definitionen für das Plugin Evangelische Termine
+//
+// 
+//    Created on : 01.02.2018, 02:18:52
+//    Author     : kngroh
+//
 
+
+.et_content_date {
+    float: left;
+    display: block;
+    background-color: $PalettonDunkler;
+    min-height: 50px;
+    width: 100px;
+    //padding: 5px;
+    text-align: center;
+       span {
+            font: italic 16px $fontStackLight;
+            line-height: 24px;
+            }
+           .et_litname {
+                display: none;
+            }
+            .et_uhrzeit {
+                &:before {
+                    @extend .fa;
+                    @extend .fa-circle;
+                    color: $colorText;
+                    font-size: 0px;
+                }
+            }
+}
+.et_content_title { 
+
+    margin-left: 120px;
+    .et_link_title {
+        font-weight: bold;
+    }
+            .et_personname {
+                 &:before {
+                    @extend .fa;
+                    @extend .fa-circle;
+                    color: $colorSubNav;
+                    font-size: 12px;
+                    padding-right: 6px;
+                    padding-left: 2px;
+                }
+            }
+            
+            .et_description {
+                padding-right: 4px;
+            }
+            .et_city {
+                display: none;
+            }
+}
 // Termine 
-div.et_content_row {
-    display: inline;
-	margin-bottom: 20px;
-        font-size: 50px;
+.et_content_row {
+	margin-bottom: 30px;
+        margin-left: 45px;
+        border-top: 1px solid $PalettonDunkler;
+        //font-size: 50px;
         
-            &:before {
+	div {
+            //padding: 30px 0 10px 0;
+            font: 16px $fontStackLight;
+            padding: 15px 0 20px 0;
+            letter-spacing: 0.1em;
+
+/*            &:before {
                 @extend .fa;
                 //@extend .fa-3x;
                 @extend .fa-circle;
                 color: $colorSubNav;
                 font-size: 20px;
                 padding-right: 25px;
-            }
+            }*/
 
 	}
-        .et_content_date {
-            br {
-                display: none;
-                @extend .fa;
-                //@extend .fa-3x;
-                @extend .fa-circle;
-                color: $colorSubNav;
-                font-size: 20px;
-            }
-        }
 }
-/*	.news-meta {
-		padding: 5px 0;
-		margin-top: 0px;
-		margin-bottom: 10px;
-		color: $colorText;
-		display: block;
-		font-family: $fontStack;
-		
-		.news-meta-categories:before {
-		    @extend .fa;
-		    @extend .fa-tag;
-		}
-		.news-meta-date:before {
-		    @extend .fa;
-		    @extend .fa-calendar;
-		}
-	}
-	.news-meta-date {
-	    margin-left: 10px;
-	}
-	h2 .ext-link {
-		@include inline-block;
-		background: url('../img/ext-icon-19.png') no-repeat 100% 50%;
-		padding-right: 15px;
-		
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
-	}
-	*/

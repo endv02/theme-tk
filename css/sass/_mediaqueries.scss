@@ -787,6 +787,9 @@ Media Queries for Theme FAU-Einrichtungen
                 } 
             }            
         }
+        .et_content_row {
+            margin-left: 35px;
+        }
  
     }
     
@@ -1113,12 +1116,11 @@ Media Queries for Theme FAU-Einrichtungen
 	padding: 20px 15px;
     }
 
-    
 }
 
 @media (max-width: $breakXS) {
     #hero {
-	// display: none;
+        // display: none;
     }
     #logo {
         h1 {
@@ -1127,67 +1129,95 @@ Media Queries for Theme FAU-Einrichtungen
     }
     hr,
     .imagelink_carousel {
-	display: none;
+        display: none;
     }
     .page-template-page-start .span3 {
-	float: none;
+        float: none;
     }
     #content {
         main { //neu dazu
-            p {
-                padding-left: 12px;
-                padding-right: 12px;
+               p {
+                   padding-left: 12px;
+                   padding-right: 12px;
+               }
+               h2 {
+                   padding-left: 12px;
+                   padding-right: 12px;
+               }
+               ul,
+               ol {
+                   padding-left: 40px;
+               }
+        }
+        padding-top: 0px;
+        .news-item {	    
+            .span3,
+            .span5 {
+                width: 100%;
+                float: none;
             }
-            h2 {
-                padding-left: 12px;
-                padding-right: 12px;
-            }
-            ul,
-            ol {
-                padding-left: 40px;
+            /*                .span8 p {
+                                padding-left: 0;
+                                padding-right: 0;
+                            }*/
+
+            .news-image {
+                text-align: center;
+                float: none;
+                margin: 3px auto;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    margin: 0;
+                }
             }
         }
-	padding-top: 0px;
-	.news-item {	    
-		.span3,
-		.span5 {
-		    width: 100%;
-		    float: none;
-		}
-/*                .span8 p {
-                    padding-left: 0;
-                    padding-right: 0;
-                }*/
-                
-	    .news-image {
-		text-align: center;
-		float: none;
-		margin: 3px auto;
-
-		img {
-		    width: 100%;
-		    height: auto;
-		    margin: 0;
-		}
-	    }
-	}
         .news-details {
             .post-image {
-		text-align: center;
-		float: none;
-		//margin: 3px auto;
-		    width: 100%;
-		    height: auto;
-		    margin: 0;
-/*		img {
-		    width: 100%;
-		    height: auto;
-		    margin: 0;
-		}*/
-	    }
+                text-align: center;
+                float: none;
+                //margin: 3px auto;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                /*		img {
+                                    width: 100%;
+                                    height: auto;
+                                    margin: 0;
+                                }*/
+            }
         }
+        .et_content_date {
+            min-height: 16px;
+            width: 100%;
+            text-align: left;
+            padding: 5px 12px 5px 12px;
+            br {
+                display: none;
+            }
+            .et_uhrzeit {
+                &:before {
+                    font-size: 8px;
+                    padding-right: 6px;
+                    padding-left: 6px;
+                }
+            }
+        }
+
+        .et_content_row {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 15px;
+            .et_content_title {
+                margin-left: 0px;
+                margin-top: 30px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-top: 10px;
+            }
+        }   
     }
- 
 }
 
 
