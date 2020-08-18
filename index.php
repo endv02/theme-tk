@@ -10,6 +10,7 @@
 get_header(); 
 
 $posttype = get_post_type();
+echo $posttype;
 ?>
 
 	<?php if($posttype == 'event') {
