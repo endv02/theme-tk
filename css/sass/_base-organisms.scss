@@ -1792,6 +1792,49 @@ input[type="button"] {
 
         }
         
+        .startrows {
+            //float: right;
+            p {
+                padding: 10px 0 10px 0;
+                font-size: 18px;
+                line-height: 26px;
+            }
+            
+            .losungen {
+                font-size: 95%;
+                padding: 5px 0 5px 0;
+            }
+                
+            .ltitel {
+                font-size: 95%;
+                font-weight: bold;
+            }
+            .ltext {
+              
+            }
+            .lquelle {
+                font-style: italic;
+                font-weight: bold;
+            }
+            .lcopyright {
+                font-size: 85%;
+                a {
+                    color: #CDCAE6;                    
+                }
+                a:hover {
+                    color: #fff;
+                }
+            }
+            .wp-block-image {
+                margin: 0 0 16px 0 !important;
+            }
+            figure {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+        }
+        
         .span8 {
             margin-left: 0;
             

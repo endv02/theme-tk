@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Startseite
+ * Template Name: Startseite Modifiziert
  *
  * @package WordPress
  * @subpackage FAU
