@@ -62,7 +62,7 @@ $posttype = get_post_type();
 						} elseif ($posttype == 'person')  { 	
 						    //echo FAU_Person_Shortcodes::fau_person(array("id"=> $post->ID, 'format' => 'kompakt', 'showlink' => 0, 'showlist' => 1 )); // 					    
 						} elseif($posttype == 'post') { 
-						      //echo fau_display_news_teaser($post->ID,true);
+						      echo fau_display_news_teaser($post->ID,true);
 						 } else { ?>
 
 
